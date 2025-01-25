@@ -9,10 +9,33 @@ connect();
 
 const container = document.getElementById("container");
 const bigHeart = document.getElementById("big-heart");
+const square = document.getElementById("square");
+const qrcodeContainer = document.getElementById("qrcode-container");
+const randomNumber = document.getElementById("random-number");
 
 const animations = ["float-1", "float-2", "float-3", "float-4"];
 
 let timeoutId = null;
+
+
+function randomID() {
+    const array = new Uint32Array(1);
+    self.crypto.getRandomValues(array);
+
+    const result = array[0].toString().padStart(10, '0').slice(1);
+
+    const segments = [
+        result.slice(0, 3),
+        result.slice(3, 6),
+        result.slice(6, 9),
+    ];
+
+    return segments.join('-');
+}
+
+square.addEventListener("click", () => {
+    qrcodeContainer.innerText = randomID();
+});
 
 function growHeart() {
     bigHeart.classList.add("tapped");
