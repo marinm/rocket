@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: none;
+}
+body {
+    user-select: none;
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    user-select: none;
+    position: absolute;
+    animation-fill-mode: forwards;
+    font-size: 0.5in;
+    line-height: 0.5in;
+    cursor: default;
+}
+
+#big-heart {
+    user-select: none;
+    font-size: 1in;
+    cursor: default;
+    line-height: 1in;
+    transition: transform 0.25s linear, filter 0.50s ease-in;
+}
+
+#big-heart.tapped {
+    transform: scale(1.1);
+}
+
+.grayscale {
+    filter: grayscale(1);
+}
+
+@keyframes grow {
+    0% {
+        scale: 1.0;
+    }
+
+    50% {
+        scale: 1.3;
+    }
+
+    100% {
+        scale: 1.0;
+    }
+}
+
+@keyframes float-1 {
+    0% {
+        scale: 0.2;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        translate: 20mm -50mm;
+        rotate: 15deg;
+        scale: 1;
+        opacity: 0;
+    }
+}
+
+@keyframes float-2 {
+    0% {
+        scale: 0.3;
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        translate: -10mm -70mm;
+        rotate: -10deg;
+        scale: 1;
+        opacity: 0;
+    }
+}
+
+@keyframes float-3 {
+    0% {
+        scale: 0.4;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        translate: -10mm -90mm;
+        rotate: -20deg;
+        scale: 0.8;
+        opacity: 0;
+    }
+}
+
+@keyframes float-4 {
+    0% {
+        scale: 0.4;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        translate: 15mm -110mm;
+        rotate: 30deg;
+        scale: 0.7;
+        opacity: 0;
+    }
+}
