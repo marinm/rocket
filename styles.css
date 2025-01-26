@@ -41,12 +41,13 @@ body {
     align-items: center;
 }
 
-#qrcode-container {
+#popup {
     position: absolute;
     width: 5cm;
     height: 5cm;
     background-color: white;
     border-radius: 2mm;
+    padding: 2mm;
 }
 
 .heart {
