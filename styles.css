@@ -43,6 +43,7 @@ body {
 
 #popup {
     position: absolute;
+    visibility: hidden;
     width: 5cm;
     height: 5cm;
     background-color: white;
